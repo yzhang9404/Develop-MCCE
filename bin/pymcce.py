@@ -14,6 +14,8 @@ PH2KCAL = 1.364
 KCAL2KT = 1.688
 KJ2KCAL = 0.239
 
+logging.basicConfig(level=logging.DEBUG)
+
 class Env:
     def __init__(self):
         # Hard coded values
@@ -682,8 +684,5 @@ def deltaE(prot, state, off_confs, on_confs):
 env = Env()
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.info)
-    logging.info("This is pymcce module.")
-    logging.info("Use pymonte.py to run mcce step 4.")
     prot = MC_Protein()
     prot.report_biglist()
